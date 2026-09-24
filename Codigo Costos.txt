@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<a href="tabla.html">Tabla de costos</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Costos</title>
+</head>
+<body>
+
+
+
+
+<br>
+
+
+
+
+<label>Nombre del producto:</label>
+<input type="text" id="nombre">
+
+
+
+
+<br>
+
+
+
+
+<label>Nombre del Insumo</label>
+<input type="text" id="insumo">
+<label>precio</label>
+<input type="number" id="precio">
+<label>Cantidad</label>
+<input type="number" id="cantidad">
+<label>Unidad de medida</label>
+<input type="text" id="unidad">
+
+
+
+
+<br>
+
+
+
+
+<button id="otro">Otro Insumo</button>
+<button id="finalizar">Finalizar</button>
+<button id="otroproducto">Otro Producto</button>
+
+
+
+
+<br>
+
+
+
+
+<table>
+    <tr>
+        <th>nombre</th>
+        <th>insumo</th>
+        <th>precio</th>
+        <th>cantidad</th>
+        <th>unidad</th>
+    </tr>
+    <tbody id="tabladedatos"></tbody>
+
+
+
+
+</table>
+
+
+
+
+<script>
+
+
+
+
+
+
+
+
+document.getElementById("otro").onclick = function (){
+    let nombre = document.getElementById("nombre").value;
+    let insumo = document.getElementById("insumo").value;
+    let precio = document.getElementById("precio").value;
+    let cantidad = document.getElementById("cantidad").value;
+    let unidad = document.getElementById("unidad").value;
+
+
+
+
+    let fila = document.createElement("tr");
+
+
+
+
+    let celda1 = document.createElement("td");
+    celda1.textContent = nombre;
+    let celda2 = document.createElement("td");
+    celda2.textContent = insumo;
+    let celda3 = document.createElement("td");
+    celda3.textContent = precio;
+    let celda4 = document.createElement("td");
+    celda4.textContent = cantidad;
+    let celda5 = document.createElement("td");
+    celda5.textContent = unidad;
+
+
+
+
+    fila.appendChild(celda1);
+    fila.appendChild(celda2);
+    fila.appendChild(celda3);
+    fila.appendChild(celda4);
+    fila.appendChild(celda5);
+
+
+
+
+    document.getElementById("tabladedatos").appendChild(fila);
+
+
+
+
+    document.getElementById("insumo").value = "";
+    document.getElementById("precio").value = "";
+    document.getElementById("cantidad").value = "";
+    document.getElementById("unidad").value = "";
+}
+document.getElementById("otroproducto").onclick = function (){
+     
+    let nombre = document.getElementById("nombre").value;
+    let insumo = document.getElementById("insumo").value;
+    let precio = document.getElementById("precio").value;
+    let cantidad = document.getElementById("cantidad").value;
+    let unidad = document.getElementById("unidad").value;
+
+
+
+
+    let fila = document.createElement("tr");
+
+
+
+
+    let celda1 = document.createElement("td");
+    celda1.textContent = nombre;
+    let celda2 = document.createElement("td");
+    celda2.textContent = insumo;
+    let celda3 = document.createElement("td");
+    celda3.textContent = precio;
+    let celda4 = document.createElement("td");
+    celda4.textContent = cantidad;
+    let celda5 = document.createElement("td");
+    celda5.textContent = unidad;
+
+
+
+
+    fila.appendChild(celda1);
+    fila.appendChild(celda2);
+    fila.appendChild(celda3);
+    fila.appendChild(celda4);
+    fila.appendChild(celda5);
+
+
+
+
+    document.getElementById("tabladedatos").appendChild(fila);
+
+
+    document.getElementById("nombre").value = "";
+    document.getElementById("insumo").value = "";
+    document.getElementById("precio").value = "";
+    document.getElementById("cantidad").value = "";
+    document.getElementById("unidad").value = "";
+}
+</script>
+
+
